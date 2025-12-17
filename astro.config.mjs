@@ -10,6 +10,6 @@ export default defineConfig({
       plugins: [tailwindcss()],
   },
 
-  site: 'https://midominio.com',
+  site: 'https://mocozin-page.vercel.app',
   integrations: [sitemap()],
 });
