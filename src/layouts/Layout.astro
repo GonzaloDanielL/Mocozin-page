@@ -3,20 +3,45 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<link rel="icon" type="image/svg+xml" href="/icono.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<meta
+			name="description"
+			content="Mocozin es un juego de plataformas en 2D que fusiona la belleza del arte pixelado con ilustraciones vectoriales de alta calidad. En este emocionante juego, tu misión es esquivar proyectiles y superar desafíos cronometrados para acumular monedas que te permitirán desbloquear una variada selección de personajes."
+		/>
+		<link rel="canonical" href="" />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:title" content="Mocozin" />
+		<meta
+			property="og:description"
+			content="Mocozin es un juego de plataformas en 2D que fusiona la belleza del arte pixelado con ilustraciones vectoriales de alta calidad. En este emocionante juego, tu misión es esquivar proyectiles y superar desafíos cronometrados para acumular monedas que te permitirán desbloquear una variada selección de personajes."
+		/>
+		<meta property="og:image" content={new URL("/icono.svg", Astro.url)} />
+
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:title" content="Mocozin" />
+		<meta
+			property="twitter:description"
+			content="Mocozin es un juego de plataformas en 2D que fusiona la belleza del arte pixelado con ilustraciones vectoriales de alta calidad. En este emocionante juego, tu misión es esquivar proyectiles y superar desafíos cronometrados para acumular monedas que te permitirán desbloquear una variada selección de personajes."
+		/>
+		<meta
+			property="twitter:image"
+			content={new URL("/icono.svg", Astro.url)}
+		/>
+
+		<meta name="generator" content={Astro.generator} />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Playpen+Sans&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Mocozin</title>
 	</head>
-	<body>
+	<body class="bg-gray-500">
 		<slot />
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+@import "tailwindcss";
+
+.font-agbalumo {
+    font-family: 'Agbalumo', serif;
+}
+
+.font-playpen {
+    font-family: 'Playpen Sans', sans-serif;
+}
+
+.color-verde-m {
+    color: #11ff00;
+}
+
+.text-10xl {
+    font-size: 10rem;
+}
+
+:root {
+    --grid-cols-tarjetas-2: repeat(auto-fit, minmax(400px, 1fr));
+    --grid-cols-tarjetas-1: repeat(auto-fit, minmax(50px, 1fr));
+    --my-text-shadow: 3px 3px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+
+@media (width < 1024px) {
+    :root {
+        --grid-cols-tarjetas-2: repeat(auto-fit, minmax(300px, 1fr));
+        --grid-cols-tarjetas-1: repeat(auto-fit, minmax(80px, 1fr));
+    }
+}
+
+@media (width < 768px) {
+    .text-10xl {
+        font-size: 6rem;
+    }
+}
+
+@media (width < 640px) {
+    .text-10xl {
+        font-size: 4rem;
+    }
+
+    :root {
+        --grid-cols-tarjetas-2: repeat(auto-fit, minmax(250px, 1fr));
+        --grid-cols-tarjetas-1: repeat(auto-fit, minmax(80px, 1fr));
+        --my-text-shadow: 1px 2px 0 #000,
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+    }
+}

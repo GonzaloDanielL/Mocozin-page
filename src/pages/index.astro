@@ -1,11 +1,59 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Fondo from "../components/Fondo.astro";
+import Seccion from "../components/Seccion.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+import "../styles/global.css";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<Fondo />
+	<Header />
+	<main class="flex flex-col gap-20 bg-white pt-20 pb-20 items-center max-lg:p-20 max-md:pl-10 max-md:pr-10 max-sm:pl-5 max-sm:pr-5 max-sm:gap-10 max-sm:pt-12 max-sm:pb-12">
+		<Seccion
+			titulo="¿Qué es Mocozin?"
+			descripcion="Mocozin es un juego de plataformas en 2D que fusiona la belleza del arte pixelado con ilustraciones vectoriales de alta calidad. En este emocionante juego, tu misión es esquivar proyectiles y superar desafíos cronometrados para acumular monedas que te permitirán desbloquear una variada selección de personajes."
+			orden="--grid-cols-tarjetas-2"
+			imagenes={[
+				["/menu-1.webp", "Mocozin, imagen del menú principal."],
+				["/menu-2.webp", "Mocozin, imagen de la tienda."],
+				["/menu-3.webp", "Mocozin, imagen del selector de personaje."],
+				["/escenario-1.webp", "Mocozin, imagen del escenario."],
+			]}
+		/>
+
+		<Seccion
+			titulo="Varios niveles"
+			descripcion="Enfréntate a niveles cada vez más desafiantes para ganar monedas que te permitirán desbloquear una amplia variedad de personajes. Conforme avanzas, los proyectiles se vuelven más numerosos y veloces, pero la recompensa de monedas también aumenta, añadiendo emoción y dificultad a tu juego."
+			orden="--grid-cols-tarjetas-2"
+			imagenes={[
+				["/escenario-2.webp", "Mocozin, imagen del escenario 1."],
+				["/escenario-3.webp", "Mocozin, imagen del escenario 2."],
+				["/escenario-4.webp", "Mocozin, imagen del escenario 3."],
+				["/escenario-5.webp", "Mocozin, imagen del escenario 4."],
+			]}
+		/>
+
+		<Seccion
+			titulo="Muchos personajes"
+			descripcion="Experimenta la diversión de jugar con la variada selección de personajes que Mocozin tiene para ofrecer. Cada personaje presenta atributos únicos en términos de velocidad y vidas, pero solo unos pocos desbloquean habilidades especiales. ¿Qué estás esperando para descubrir estas sorprendentes habilidades?"
+			orden="--grid-cols-tarjetas-1"
+			imagenes={[
+				["/personaje-1.webp", "Mocozin, imagen de personaje 1."],
+				["/personaje-2.webp", "Mocozin, imagen del personaje 2."],
+				["/personaje-3.webp", "Mocozin, imagen del personaje 3."],
+				["/personaje-4.webp", "Mocozin, imagen del personaje 4."],
+				["/personaje-5.webp", "Mocozin, imagen del personaje 5."],
+				["/personaje-6.webp", "Mocozin, imagen del personaje 6."],
+				["/personaje-7.webp", "Mocozin, imagen del personaje 7."],
+			]}
+		/>
+	</main>
+
+	<Footer />
 </Layout>
